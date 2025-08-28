@@ -1,9 +1,19 @@
+<!-- This HTML file displays a logo that is responsive to screen size.
+On mobile devices, the logo takes up to 80% of the viewport width.
+On desktop devices, it reduces to 40% of the viewport width. -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Logo</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
   <style>
     body {
       margin: 0;
@@ -22,12 +32,15 @@
     /* On desktop: reduce logo size */
     @media (min-width: 768px) {
       img {
-        max-width: 40%; /* 50% smaller than mobile */
+        max-width: 40%;
+        /* 50% smaller than mobile */
       }
     }
   </style>
 </head>
+
 <body>
   <img src="logo.png" alt="Logo">
 </body>
+
 </html>
