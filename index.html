@@ -24,24 +24,43 @@ On desktop devices, it reduces to 40% of the viewport width. -->
       background: #fff;
     }
 
-    img {
+    .poster {
+      position: relative;
+      display: inline-block;
       max-width: 80%;
-      height: auto;
       transform: scale(0.9);
     }
 
-    /* On desktop: reduce logo size */
+    .poster img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Transparent clickable area */
+    .whatsapp-link {
+      position: absolute;
+      bottom: 5%;      /* adjust vertically */
+      left: 10%;       /* adjust horizontally */
+      width: 80%;      /* cover just the number area */
+      height: 12%;     /* height of number band */
+      cursor: pointer;
+    }
+
+    /* On desktop: smaller poster */
     @media (min-width: 768px) {
-      img {
+      .poster {
         max-width: 40%;
-        /* 50% smaller than mobile */
       }
     }
   </style>
 </head>
 
 <body>
-  <img src="logo.png" alt="Logo">
+  <div class="poster">
+    <img src="logo.png" alt="Logo">
+    <a class="whatsapp-link" href="https://wa.me/919869234902" target="_blank"></a>
+  </div>
 </body>
 
 </html>
